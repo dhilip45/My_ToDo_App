@@ -249,9 +249,7 @@ h1 {
   transform: translateY(-1px);
 }
 
-/* =========================
-   Todo List
-========================= */
+/*  Todo List */
 
 .todo-list {
   display: flex;
@@ -515,7 +513,6 @@ h1 {
 }
 
 /*  Mobile*/
-
 @media (max-width: 520px) {
   .app {
     padding: 20px 10px;
@@ -523,15 +520,15 @@ h1 {
 
   .todo-container {
     padding: 22px 15px;
-
     border-radius: 18px;
   }
 
   h1 {
     margin-bottom: 22px;
-
     font-size: 2rem;
   }
+
+  /* Todo Form */
 
   .todo-form {
     flex-direction: column;
@@ -545,55 +542,69 @@ h1 {
     width: 100%;
   }
 
+  /* Filters */
+
   .todo-filter {
     gap: 4px;
   }
 
   .todo-filter button {
     padding: 9px 5px;
-
     font-size: 13px;
   }
 
-  .todo-item {
-    align-items: flex-start;
+  /* Todo Item */
 
-    padding: 13px;
+  .todo-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
   }
 
   .todo-item input[type="checkbox"] {
+    flex-shrink: 0;
     margin-top: 2px;
   }
 
+  /* Todo Text */
+
   .todo-text {
-    font-size: 14px;
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 
+  /* Todo Actions */
+
   .todo-actions {
-    width: 100%;
-
-    margin-left: 33px;
-
+    width: calc(100% - 31px);
+    margin-left: 31px;
     margin-top: 4px;
+    display: flex;
+    gap: 6px;
   }
 
   .todo-actions button {
     flex: 1;
-
-    padding: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
   }
+
+  /* Footer */
 
   .todo-footer {
     flex-wrap: wrap;
-
     gap: 8px;
   }
 
   .clear-btn {
     width: 100%;
-
     margin-left: 0;
-
     margin-top: 5px;
   }
 }
@@ -625,28 +636,8 @@ h1 {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
-
     animation-iteration-count: 1 !important;
-
     scroll-behavior: auto !important;
-
     transition-duration: 0.01ms !important;
-  }
-}
-@media (max-width: 600px){
-  .todo-item {
-    gap: 10px;
-    padding: 16px;
-  }
-  .todo-text {
-    font-size: 16px;
-  }
-  .todo-actions {
-    gap: 6px;
-  }
-
-  .todo-actions bottom {
-    padding: 8px 12px;
-    font-size: 14px;
   }
 }
