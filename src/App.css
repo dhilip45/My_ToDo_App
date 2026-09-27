@@ -322,6 +322,7 @@ h1 {
   font-size: 18px;
   text-align: left;
   line-height: 1.5;
+  font-weight: bold;
   overflow-wrap: break-word;
   word-break: break-word;
   transition:
@@ -564,6 +565,7 @@ h1 {
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
+    font-weight: bold;
     overflow-wrap: anywhere;
     word-break: normal;
   }
