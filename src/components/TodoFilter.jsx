@@ -2,12 +2,12 @@ function TodoFilter({ filter, setFilter }) {
   return (
     <div className="todo-filter">
 
-      <button
+      {/* <button
         className={filter === "all" ? "active" : ""}
         onClick={() => setFilter("all")}
       >
         All
-      </button>
+      </button> */}
 
       <button
         className={filter === "active" ? "active" : ""}
