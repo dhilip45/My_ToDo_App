@@ -11,7 +11,7 @@ function App() {
     return savedTodos ? JSON.parse(savedTodos) : [];
   });
 
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("active");
 
   // Save todos to localStorage whenever todos changes
   useEffect(() => {
@@ -67,26 +67,23 @@ function App() {
 
   // Filter todos
   const filteredTodos = todos.filter((todo) => {
-  // if (filter === "all") {
-  //   return !todo.completed;
-  // }
+    if (filter === "active") {
+      return !todo.completed;
+    }
 
-  if (filter === "active") {
-    return !todo.completed;
-  }
+    if (filter === "completed") {
+      return todo.completed;
+    }
 
-  if (filter === "completed") {
-    return todo.completed;
-  }
-
-  return true;
-});
+    return false;
+  });
 
   // Count active tasks
   const activeCount = todos.filter(
     (todo) => !todo.completed
   ).length;
 
+  // Count completed tasks
   const completedCount = todos.filter(
     (todo) => todo.completed
   ).length;
